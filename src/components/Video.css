@@ -1,0 +1,26 @@
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.video-element {
+  width: 100%;  /* Make sure the video takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  background-color: black;  /* Optional: Ensure black background if the video is smaller */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-element {
+    height: 300px; /* Adjust height for smaller devices */
+  }
+}
+
+@media (min-width: 769px) {
+  .video-element {
+    height: 500px; /* Adjust height for larger screens */
+  }
+}

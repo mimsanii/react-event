@@ -1,0 +1,209 @@
+/* General Styles */
+.create-event-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .create-event-page:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .create-event-page h1 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+  }
+  
+  .create-event-page h1::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: #5cb85c;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Form Styles */
+  .create-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-section:hover {
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-section label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .form-section label:hover {
+    color: #5cb85c;
+  }
+  
+  .form-section input,
+  .form-section select,
+  .form-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-section input:focus,
+  .form-section select:focus,
+  .form-section textarea:focus {
+    border-color: #5cb85c;
+    box-shadow: 0 0 8px rgba(92, 184, 92, 0.3);
+  }
+  
+  .form-section textarea {
+    resize: vertical;
+    height: 120px;
+  }
+  
+  .form-section input[type="file"] {
+    border: none;
+    padding: 5px;
+  }
+  
+  .form-section input[type="checkbox"] {
+    width: auto;
+    margin-left: 5px;
+  }
+  
+  /* Ticket Section Styling */
+  .form-section select,
+  .form-section input[type="number"] {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  /* Action Buttons */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .cancel-btn,
+  .save-draft-btn,
+  .next-page-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cancel-btn {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .save-draft-btn {
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .next-page-btn {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(217, 83, 79, 0.5);
+  }
+  
+  .save-draft-btn:hover {
+    background-color: #ec971f;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(240, 173, 78, 0.5);
+  }
+  
+  .next-page-btn:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(92, 184, 92, 0.5);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .create-event-page {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+      font-size: 14px;
+    }
+  
+    .form-section input[type="number"] {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .cancel-btn,
+    .save-draft-btn,
+    .next-page-btn {
+      width: 100%;
+    }
+  }
+  

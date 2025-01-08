@@ -1,0 +1,101 @@
+.review-event {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .review-event h1 {
+    grid-column: 1 / -1; /* Full-width for the title */
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+  }
+  
+  .event-summary,
+  .drafted-events,
+  .event-preview,
+  .publishing-options,
+  .advanced-settings {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-summary h2,
+  .drafted-events h2,
+  .event-preview h2,
+  .publishing-options h2,
+  .advanced-settings h2 {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .review-buttons {
+    grid-column: 1 / -1; /* Full-width */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .review-buttons .edit-btn,
+  .review-buttons .submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .review-buttons .edit-btn {
+    background-color: #f0ad4e;
+    color: #fff;
+  }
+  
+  .review-buttons .submit-btn {
+    background-color: #5cb85c;
+    color: #fff;
+  }
+  
+  .review-buttons .edit-btn:hover {
+    background-color: #ec971f;
+  }
+  
+  .review-buttons .submit-btn:hover {
+    background-color: #4cae4c;
+  }
+  
+  .preview-btn,
+  .save-draft-btn,
+  .publish-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .preview-btn:hover,
+  .save-draft-btn:hover,
+  .publish-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .publishing-select {
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  

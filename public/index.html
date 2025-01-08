@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Event Details page with React and modern design" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Title -->
+    <title>Event Details - React App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/app.css" />
+
+    <!-- Inline Styling -->
+    <style>
+      :root {
+        --primary-color: #ff6600;
+        --secondary-color: #f9f9f9;
+        --hover-color: #ff8800;
+        --text-color: #333;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+      }
+
+      noscript {
+        color: var(--primary-color);
+        text-align: center;
+        font-weight: bold;
+      }
+
+      /* Header Styling */
+      .header {
+        background-color: var(--primary-color);
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      /* Slideshow Section */
+      .slideshow {
+        background-color: #eaeaea;
+        padding: 30px;
+        text-align: center;
+      }
+
+      /* Event Listing Section */
+      .event-listing {
+        padding: 40px;
+        background-color: #ffffff;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .event-details {
+        text-align: center;
+      }
+
+      .event-details h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+
+      .event-details p {
+        font-size: 1.1rem;
+      }
+
+      /* Testimonial Section */
+      .testimonial-container {
+        padding: 30px;
+        background-color: #f7f7f7;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-container h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+
+      .testimonial {
+        text-align: center;
+        font-style: italic;
+        margin: 20px 0;
+      }
+
+      .testimonial h4 {
+        margin-top: 10px;
+        color: var(--primary-color);
+      }
+
+      /* Booking Form Section */
+      .booking-form-container {
+        padding: 30px;
+        background-color: #ffffff;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .booking-form-container h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        text-align: center;
+      }
+
+      .booking-form-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .booking-form-container label {
+        margin: 10px 0 5px;
+        font-size: 1rem;
+      }
+
+      .booking-form-container input {
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 80%;
+        max-width: 400px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .booking-form-container button {
+        padding: 10px 20px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .booking-form-container button:hover {
+        background-color: var(--hover-color);
+      }
+
+      /* Footer Section */
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      .footer p {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Event Details</h1>
+    </header>
+
+    <main id="root" class="App">
+      <section class="slideshow">
+        <div>Slideshow Placeholder</div>
+      </section>
+
+      <section class="event-listing">
+        <div class="event-details">
+          <h2>Event Title</h2>
+          <p>Details about the event will go here.</p>
+        </div>
+      </section>
+
+      <section class="testimonial-container">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+          <p>"This was the best event ever!"</p>
+          <h4>- Attendee Name</h4>
+        </div>
+      </section>
+
+      <section class="booking-form-container">
+        <h2>Book Your Spot</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <button type="submit">Book Now</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <p>&copy; 2024 Event Company. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="%PUBLIC_URL%/index.js"></script>
+  </body>
+</html>

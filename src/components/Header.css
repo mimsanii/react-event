@@ -1,0 +1,98 @@
+/* Header Component Styles */
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease;
+}
+
+.header:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header .logo h1 {
+  font-family: "Arial, sans-serif";
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+}
+
+.header .logo span {
+  color: #ff8c00;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-link {
+  color: #ff8c00;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  transform: scale(1.1);
+}
+
+.nav-link i {
+  font-size: 18px;
+}
+
+.nav-link.active {
+  color: #fff;
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+/* Mobile Footer Icons */
+.footer-icons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.footer-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    display: none; /* Hide header on mobile */
+  }
+}

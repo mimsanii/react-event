@@ -1,0 +1,104 @@
+/* src/components/BookingForm.css */
+.booking-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: block;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+input,
+select {
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+.submit-btn {
+  padding: 15px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #ff8800;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.price-section {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price-section p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .booking-form-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

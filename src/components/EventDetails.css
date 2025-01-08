@@ -1,0 +1,177 @@
+/* Root Variables for Dynamic Styling */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #2196F3;
+  --accent-color: #FFC107;
+  --hover-color: #3E8E41;
+  --font-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --transition-speed: 0.3s;
+}
+
+/* General Button Styles */
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  color: var(--font-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-3px);
+}
+
+/* Specific Button Styles */
+.book-now-btn {
+  background-color: var(--primary-color);
+}
+
+.book-room-btn {
+  background-color: var(--secondary-color);
+}
+
+.payment-btn {
+  background-color: var(--accent-color);
+}
+
+.book-now-btn:hover,
+.book-room-btn:hover,
+.payment-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Sponsor Image Hover Effect */
+.sponsor-img {
+  width: 100px;
+  height: auto;
+  opacity: 0.8;
+  transition: transform var(--transition-speed), opacity var(--transition-speed);
+}
+
+.sponsor-img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Event Header Layout */
+.event-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.event-img {
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: transform var(--transition-speed);
+}
+
+.event-img:hover {
+  transform: scale(1.05);
+}
+
+.event-info {
+  flex-grow: 1;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.event-info h1 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.event-info p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Ticket Options Layout */
+.ticket-options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.rooms-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.room-item {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: transform var(--transition-speed);
+}
+
+.room-item:hover {
+  transform: scale(1.1);
+}
+
+/* Sponsor Slideshow */
+.sponsor-slideshow {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sponsor-logos {
+  display: flex;
+  gap: 20px;
+  transition: transform 1s ease;
+}
+
+.sponsor-img {
+  width: 100px;
+  height: auto;
+  opacity: 0.6;
+  transition: transform var(--transition-speed), opacity var(--transition-speed);
+}
+
+.sponsor-img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-img {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .rooms-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
+}

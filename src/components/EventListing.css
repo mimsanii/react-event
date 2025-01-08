@@ -1,0 +1,247 @@
+/* General Event Listing Styles */
+.event-listing {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #ffffff, #f0f4f9);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Search Input Styles */
+.search-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.4);
+}
+
+/* Event Card Styles */
+.event-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.event-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Event Details */
+.event-details {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.event-details h2 {
+  color: #ff6600;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.event-details p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Call-to-Action Buttons */
+.view-details-button,
+.view-room-booking-button {
+  background-color: #ff9900;
+  color: #ffffff;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.view-details-button:hover,
+.view-room-booking-button:hover {
+  background-color: #ff7700;
+  transform: translateY(-3px);
+}
+
+.expired-message {
+  color: #e63946;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Event Grid */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Category Icons */
+.category-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.category-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.category-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.category-icon:hover {
+  transform: scale(1.1);
+  color: #ff6600;
+}
+
+.category-icon img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.category-icon:hover img {
+  transform: rotate(10deg) scale(1.15);
+}
+
+/* Upcoming and Trending Events */
+.upcoming-events,
+.trending-events {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
+.upcoming-poster,
+.trending-event-card img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.upcoming-poster:hover,
+.trending-event-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #ff9900;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pagination button.active-page {
+  background-color: #ff6600;
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .view-details-button,
+  .view-room-booking-button {
+    padding: 10px;
+  }
+
+  .pagination button {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,54 @@
+/* src/components/Room.css */
+.room-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .room-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .room-card h3 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .room-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .book-room-btn {
+    padding: 12px 25px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .book-room-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .book-room-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .book-room-btn:active {
+    transform: scale(0.98);
+  }
+  
